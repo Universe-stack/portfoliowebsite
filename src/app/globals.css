@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.solid-line{
+    position: relative;
+  }
+  
+  .solid-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7rem;
+    height: 0.3rem;
+    background-color: #121212;
+    margin-top: 1rem;
+  }
+  
