@@ -19,3 +19,17 @@
     margin-top: 1rem;
   }
   
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in-text {
+    display: inline-block;
+    white-space: nowrap; /* Prevent line breaks between letters */
+  }
+  
