@@ -6,7 +6,7 @@ import saas from "../../../public/saas.jpg";
 import reals from "../../../public/realsScreenshot.png";
 import suits from "../../../public/suitsAndVeil.png";
 import Link from "next/link";
-import TextAnimation from "../components/UI/TextAnimation"
+import TextAnimation from "../components/UI/TextAnimation";
 
 export default function About() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -32,20 +32,23 @@ export default function About() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="w-[25%] h-[15rem] self-center relative"
+            className="w-[25%] h-[15rem] self-center relative cursor-pointer transform transition-transform duration-300 ease-in-out hover:translate-y-[-10px] hover:scale-105"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="w-[100%] h-[100%]">
+            <div className="w-[100%] h-[100%] overflow-hidden">
               <Image
                 src={project.image}
                 alt="logo"
-                className="self-center cover h-[100%] w-[100%] grayscale hover:pointer"
+                className="self-center contain h-[100%] w-[100%] grayscale hover:pointer"
               />
             </div>
             {hoveredIndex === index && (
-              <div className="absolute top-0 bottom-0 right-0 left-0 bg-gray-600 opacity-80 text-white flex flex-col justify-center items-center">
+              <div className="absolute top-0 bottom-0 right-0 left-0 bg-gray-600 opacity-80 text-white flex flex-col justify-center items-center transition-opacity duration-300 ease-in-out opacity-0">
                 <p className="text-center">{project.description}</p>
+                <span className>
+                  
+                </span>
               </div>
             )}
             <p className="font-[400] mt-[0.9rem] text-[1rem]">
