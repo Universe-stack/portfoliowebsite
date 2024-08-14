@@ -16,10 +16,10 @@ const Hero = () => {
             <div className='w-[100%] flex flex-col justify-between relative'>
                 <div className='flex w-[90%] self-start'>
                     <div className='w-[100%] mt-[2rem]'>
-                        <h3 className='font-[600] bg-gray'>EXPERIENCE CLASS</h3>
+                        <h3 className='font-[600] bg-gray'>TO BECOME WORLD CLASS</h3>
                         <div className=' flex justify-between w-[60%] gap-[1rem] mt-[0.5rem]'>
-                            <p className='text-[0.6rem] font-[500]'>Import trace for requested module Import trace for requested module  Compiled in 870ms</p>
-                            <p className='text-[0.6rem] font-[500]'>Import trace for requested module Import trace for requested module  Compiled in 870ms</p>
+                            <p className='text-[0.6rem] font-[500]'>I attribute my success to this -- I never gave or took any excuse<span className='text-[#ff0000]'>~Florence Nightingale</span></p>
+                            <p className='text-[0.6rem] font-[500]'>I find that the harder I work, the more luck I seem to have.  <span className='text-[#ff0000]'>~Thomas Jefferson</span></p>
                         </div>
                     </div>
 
@@ -37,7 +37,7 @@ const Hero = () => {
 
                     </div>
 
-                    <div className=' top-[7%] lg:left-[30%] absolute h-[40rem] w-[40rem]'>
+                    <div className=' top-[7.5%] lg:left-[30%] absolute h-[40rem] w-[40rem]'>
                         <Image
                         src={kachi}
                         alt="logo"
