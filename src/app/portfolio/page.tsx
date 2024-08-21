@@ -34,7 +34,7 @@ export default function Portfolio() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="lg:w-[25%] xsm:w-[80%] h-[15rem] self-center relative cursor-pointer transform transition-transform duration-300 ease-in-out hover:translate-y-[-10px] hover:scale-105"
+            className="lg:w-[25%] xsm:w-[80%] h-[15rem] self-center relative cursor-pointer transform transition-transform duration-300 ease-in-out hover:translate-y-[-10px] hover:scale-105  border-[0.5rem] border-[#121212]"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
@@ -42,7 +42,7 @@ export default function Portfolio() {
               <Image
                 src={project.image}
                 alt="logo"
-                className="self-center contain h-[100%] w-[100%] grayscale hover:pointer"
+                className="self-center contain h-[100%] w-[100%]  hover:pointer"
               />
             </div>
             {hoveredIndex === index && (
@@ -56,7 +56,7 @@ export default function Portfolio() {
                 </span>
               </div>
             )}
-            <p className="font-[400] mt-[0.9rem] text-[1rem]">
+            <p className="font-[400] mt-[0.9rem] text-[0.85rem] text-left ">
               {hoveredIndex === index && <TextAnimation text={project.description} />}
             </p>
           </div>

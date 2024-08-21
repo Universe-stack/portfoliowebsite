@@ -20,8 +20,8 @@ const Navbar = () => {
             <div className=''>
               <ul className="flex gap-[4rem]">
                 <li className = "p-[0.6rem] font-[600]"><Link href={'/about'}>ABOUT</Link></li>
-                <li className = "p-[0.6rem] font-[600]"><Link href={'#'}>PUBS</Link></li>
-                <li className = "p-[0.6rem] font-[600]"><Link href={'#'}>SERVICES</Link></li>
+                <li className = "p-[0.6rem] font-[600] hover:cursor-not-allowed"><Link href={'/publications'}><div className="tooltip tooltip-bottom tooltip-[#121212]" data-tip="Publications">PUBS</div></Link></li>
+                <li className = "p-[0.6rem] font-[600] hover:cursor-not-allowed"><Link href={'#'}>SERVICES</Link></li>
                 <li className = "p-[0.6rem] font-[600]">
                   <Link href={''}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
