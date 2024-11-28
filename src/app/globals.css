@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background-color: #ffffff;
+  color: #000000;
+}
 
 .solid-line{
     position: relative;
