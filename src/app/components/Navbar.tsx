@@ -1,39 +1,107 @@
-import React from 'react'
-import Link from 'next/link'
-
+'use client'
+import React, { useState } from 'react';
+import Link from 'next/link';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <section className=' w-[100%] flex justify-center h-[5rem]'>
-        <div className='self-center flex w-[90%] justify-between  px-[1rem]'>
-            <div className='flex gap-[4rem] self-center'>
-                <Link href={''}>
-                  <h1 className='font-[600]'>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 font-[800]">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                    </svg>
-                  </h1>
-                </Link>
-                <Link href={'/portfolio'}><p className='font-[600]'>PROJECTS</p></Link>
-            </div>
-
-            <div className=''>
-              <ul className="flex gap-[4rem]">
-                <li className = "p-[0.6rem] font-[600]"><Link href={'/about'}>ABOUT</Link></li>
-                <li className = "p-[0.6rem] font-[600] hover:cursor-not-allowed"><Link href={'/publications'}><div className="tooltip tooltip-bottom tooltip-[#121212]" data-tip="Publications">PUBS</div></Link></li>
-                <li className = "p-[0.6rem] font-[600] hover:cursor-not-allowed"><Link href={'#'}>SERVICES</Link></li>
-                <li className = "p-[0.6rem] font-[600]">
-                  <Link href={''}>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                    </svg>
-                  </Link>
-                </li>
-              </ul>
-            </div>
+    <section className='w-[100%] flex justify-center h-[5rem]'>
+      <div className='self-center flex w-[90%] justify-between px-[1rem]'>
+        <div className='flex gap-[4rem] self-center'>
+          <Link href={''}>
+            <h1 className='font-[600]'>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill=""
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6 font-[800]"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                />
+              </svg>
+            </h1>
+          </Link>
+          <Link href={'/portfolio'} className="hidden md:block">
+            <p className='font-[600]'>PROJECTS</p>
+          </Link>
         </div>
-    </section>
-  )
-}
 
-export default Navbar
+        {/* Desktop Menu */}
+        <div className='hidden md:block'>
+          <ul className="flex gap-[4rem]">
+            <li className="p-[0.6rem] font-[600]">
+              <Link href={'/about'}>ABOUT</Link>
+            </li>
+            <li className="p-[0.6rem] font-[600] hover:cursor-not-allowed">
+              <Link href={'#'}>SERVICES</Link>
+            </li>
+            <li className="p-[0.6rem] font-[600]">
+              <Link href={''}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                  />
+                </svg>
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden self-center"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="absolute top-[5rem] left-0 w-full bg-white shadow-lg md:hidden z-50">
+            <ul className="flex flex-col gap-[1rem] p-[1rem]">
+              <li className="p-[0.6rem] font-[600] border-b">
+                <Link href="/portfolio">PROJECTS</Link>
+              </li>
+              <li className="p-[0.6rem] font-[600] border-b">
+                <Link href="/about">ABOUT</Link>
+              </li>
+              <li className="p-[0.6rem] font-[600] border-b cursor-not-allowed">
+                <Link href="#">SERVICES</Link>
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
+
+export default Navbar;

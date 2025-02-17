@@ -4,7 +4,8 @@ import Image from "next/image";
 import fig1 from "../../../public/proplabs.png";
 import fig2 from "../../../public/createcamplogo.png";
 import fig3 from "../../../public/shiptoday_1.png";
-import fig4 from "../../../public/fig4.jpg";
+import fig4 from "../../../public/Logo-01-03.jpg";
+import fig5 from "../../../public/Emba logo blue 1.png";
 
 
 import Link from "next/link";
@@ -23,26 +24,28 @@ export default function Portfolio() {
 
   const projects = [
     { image: fig1, description: "Software Development Agency website",link:"https://proplabs.vercel.app" },
+    { image: fig4, description: "Spay Luxury- End to end Ecommerce store for Male fashion brand", link:"https://spayluxury.vercel.app" },
     { image: fig2, description: "Online Marketplace for creator resources",link:"https://createcamp.vercel.app" },
     { image: fig3, description: "Next Js boilerplate for SAAS apps", link:"https://github.com/Universe-stack/quickTailor" },
-    { image: fig4, description: "Suits" },
+    { image: fig5, description: "Waitlist for Business educational LMS startup", link:"https://emba.vercel.app" }
+   
   ];
 
   return (
     <section className="flex justify-center align-middle lg:h-[90vh]">
-      <div className="self-center flex xsm:flex-col lg:flex-row lg:w-[75%] xsm:w-[100%] lg:gap-[1.5rem] xsm:gap-[4rem] p-[1.5rem] lg:h-[100%]">
+      <div className="self-center grid grid-cols-4 justify-center items-center xsm:grid-cols-1 lg:grid-cols-4 lg:w-[75%] xsm:w-[100%] lg:gap-x-[1.5rem] lg:gap-y-0 xsm:gap-[4rem] p-[1.5rem] lg:h-[100%] ">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="lg:w-[25%] xsm:w-[80%] h-[15rem] self-center relative cursor-pointer transform transition-transform duration-300 ease-in-out hover:translate-y-[-10px] hover:scale-105  border-[0.5rem] border-[#121212]"
+            className=" self-center bg-white lg:w-[100%] xsm:w-[80%] h-[15rem] relative cursor-pointer transform transition-transform duration-300 ease-in-out hover:translate-y-[-10px] hover:scale-105  border-[0.5rem] border-[#121212]"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="w-[100%] h-[100%] overflow-hidden">
+            <div className="w-[100%] h-[100%] overflow-hidden flex justify-center">
               <Image
                 src={project.image}
                 alt="logo"
-                className="self-center contain h-[100%] w-[100%]  hover:pointer"
+                className="self-center contain  hover:pointer"
               />
             </div>
             {hoveredIndex === index && (
