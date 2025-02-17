@@ -58,7 +58,7 @@ const Hero = () => {
             <div className={`2xl:rotate-90 xl:rotate-90 lg:rotate-90 mt-[4rem] md:rotate-0 sm:rotate-0 xsm:rotate-0
               transition-all duration-500 delay-300`}>
               <p className='font-[600]'>
-                MAHADUMIA'S <br /> SWE OF 2023{' '}
+                MAHADUMIA&apos;S <br /> SWE OF 2023{' '}
               </p>
               <div className='solid-line'></div>
             </div>

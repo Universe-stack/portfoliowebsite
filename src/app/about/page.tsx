@@ -13,7 +13,7 @@ const Page = () => {
                 My name is Onyekachi Justice Chinedu but my friends love to call me Kachi. I&apos;m a full stack developer who loves building technology based products and businesses. I&apos;m currently learning cloud-devops. I have a second class upper degree in cost engineering from the Federal University of Technology Owerri, Nigeria .
             </p>
             <p>
-               I&apos;m the founder of proplabs, a software development agency focused on building custom software solutions for startups. I&apos;m also the head of Emba, an online learning platform providing entrepreneurship and business themed resources. Presently, I'm building PitchDemo ai as a fun project. Want to know more about that? Hit me up. LOL
+               I&apos;m the founder of proplabs, a software development agency focused on building custom software solutions for startups. I&apos;m also the head of Emba, an online learning platform providing entrepreneurship and business themed resources. Presently, I&apos;m building PitchDemo ai as a fun project. Want to know more about that? Hit me up. LOL
             </p>
 
             <p >
