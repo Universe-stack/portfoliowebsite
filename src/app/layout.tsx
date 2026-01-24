@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Instrument_Serif, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import localFont from "@next/font/local"
 
-const inter = Inter({ subsets: ["latin"] });
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-display",
+  display: "swap",
+});
 
-const varsity= localFont({
-  src: './Mont-HeavyDEMO.otf',
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-fallback",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={varsity.className}>
+      <body className={`${instrumentSerif.className} ${instrumentSerif.variable} ${dancingScript.variable}`}>
         <main>
           <Navbar />
           {children}
