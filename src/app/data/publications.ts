@@ -12,6 +12,7 @@ export type Publication = {
   badgeText?: string;
   image: string;
   chips?: string[];
+  link?: string;
 };
 
 export const publicationCards: Publication[] = [
@@ -29,6 +30,7 @@ export const publicationCards: Publication[] = [
     badgeText: "#b32020",
     image:
       "/Rocket (1).png",
+    link:""
   },
   {
     id: "design-critiques",
@@ -45,11 +47,12 @@ export const publicationCards: Publication[] = [
     image:
       "/Money.png",
     chips: ["FE", "BE", "SWE"],
+    link:"https://howtolovejs.hashnode.dev/quick-guide-on-how-to-integrate-paystack-payments-api-into-a-website-using-nextjs"
   },
   {
     id: "brand-asset",
     badge: "Article | Devops",
-    title: "Linux for beginners",
+    title: "Linux File System for Beginners",
     summary: "From the ground up: how Linux powers real systems and how large teams use it to securely manage access at scale.",
     cta: "Restricted →",
     bg: "#f08f25",
@@ -60,6 +63,7 @@ export const publicationCards: Publication[] = [
     badgeText: "#fef3e8",
     image:
       "/Question.png",
+    link:"https://devopswithkachi.hashnode.dev/linux-file-system-for-beginners-a-friendly-guide-to-getting-started"
   },
   {
     id: "listing-redesign",
@@ -75,5 +79,6 @@ export const publicationCards: Publication[] = [
     badgeText: "#ffffff",
     image:
       "/Handshake.png",
+    link: ""
   }
 ]

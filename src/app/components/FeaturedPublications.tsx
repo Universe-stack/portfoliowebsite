@@ -55,13 +55,25 @@ export function PublicationCard({ publication, priority, variant = "featured" }:
           <p className={`${variant === "grid" ? "text-xs sm:text-sm max-w-[280px]" : "text-sm sm:text-base max-w-[320px]"} leading-relaxed opacity-90 `} style={{ color: textColor }}>
             {publication.summary}
           </p>
-          <Link
-            href="/publications"
-            className={`inline-flex w-fit items-center gap-2 rounded-full ${variant === "grid" ? "px-3 py-1.5 text-xs" : "px-4 py-2 text-sm"} font-semibold shadow-[0_10px_25px_rgba(0,0,0,0.12)] transition duration-200`}
-            style={{ backgroundColor: buttonBg, color: buttonText }}
-          >
-            {publication.cta}
-          </Link>
+          {publication.link ? (
+            <a
+              href={publication.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-flex w-fit items-center gap-2 rounded-full ${variant === "grid" ? "px-3 py-1.5 text-xs" : "px-4 py-2 text-sm"} font-semibold shadow-[0_10px_25px_rgba(0,0,0,0.12)] transition duration-200 hover:opacity-90`}
+              style={{ backgroundColor: buttonBg, color: buttonText }}
+            >
+              {publication.cta}
+            </a>
+          ) : (
+            <Link
+              href="/publications"
+              className={`inline-flex w-fit items-center gap-2 rounded-full ${variant === "grid" ? "px-3 py-1.5 text-xs" : "px-4 py-2 text-sm"} font-semibold shadow-[0_10px_25px_rgba(0,0,0,0.12)] transition duration-200`}
+              style={{ backgroundColor: buttonBg, color: buttonText }}
+            >
+              {publication.cta}
+            </Link>
+          )}
         </div>
 
         <div className="mt-6 flex flex-wrap gap-2 sm:hidden">
