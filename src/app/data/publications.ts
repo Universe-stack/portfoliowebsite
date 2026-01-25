@@ -43,7 +43,7 @@ export const publicationCards: Publication[] = [
     badgeBg: "#141414",
     badgeText: "#ffffff",
     image:
-      "/money.png",
+      "/Money.png",
     chips: ["FE", "BE", "SWE"],
   },
   {
@@ -59,7 +59,7 @@ export const publicationCards: Publication[] = [
     badgeBg: "#c46b1b",
     badgeText: "#fef3e8",
     image:
-      "/question.png",
+      "/Question.png",
   },
   {
     id: "listing-redesign",
@@ -74,6 +74,6 @@ export const publicationCards: Publication[] = [
     badgeBg: "#e28e13",
     badgeText: "#ffffff",
     image:
-      "/handshake.png",
+      "/Handshake.png",
   }
 ]
