@@ -17,7 +17,7 @@ const projects: ProjectBlock[] = [
     title: "AI powered web assistant",
     description:
       "Browse AI is an AI web assistant chrome extension built to make generative AI usable directly inside the browser.",
-    cta: "https://browseai.vercel.app",
+    cta: "https://usebrowseai.vercel.app",
     image: "/Browseai gemini.png",
   },
   {
