@@ -6,7 +6,8 @@ type ProjectBlock = {
   eyebrow: string;
   title: string;
   description: string;
-  cta: string;
+  ctaLabel: string;
+  ctaHref: string;
   image: string;
   flip?: boolean;
 };
@@ -17,7 +18,8 @@ const projects: ProjectBlock[] = [
     title: "AI powered web assistant",
     description:
       "Browse AI is an AI web assistant chrome extension built to make generative AI usable directly inside the browser.",
-    cta: "https://usebrowseai.vercel.app",
+    ctaLabel: "Learn More",
+    ctaHref: "/portfolio/browse-ai",
     image: "/Browseai gemini.png",
   },
   {
@@ -25,7 +27,8 @@ const projects: ProjectBlock[] = [
     title: "Ecommerce store for mens fashion brand",
     description:
       "Spay luxury is a mens fashion store built with Next Js that makes over 5 million naira in sales per annum",
-    cta: "https://spayluxury.com",
+    ctaLabel: "Learn More",
+    ctaHref: "/portfolio/spay-luxury",
     image: "/spay gemini.png",
     flip: true,
   },
@@ -34,7 +37,8 @@ const projects: ProjectBlock[] = [
     title: "Food delivery and tracking app",
     description:
       "Pickups is a react-native built food delivery app",
-    cta: "Learn More",
+    ctaLabel: "Learn More",
+    ctaHref: "/portfolio/pickups",
     image: "/pickups gem.png",
     flip: false,
   },
@@ -62,8 +66,8 @@ export default function Projects() {
                 {project.title}
               </h2>
               <p className="text-base sm:text-lg text-[#3f3f3f] leading-relaxed">{project.description}</p>
-              <Link href={project.cta} className="inline-flex w-fit items-center justify-center px-4 sm:px-5 py-2.5 sm:py-3 bg-black text-white text-sm sm:text-base font-semibold rounded-md shadow-[0_8px_18px_rgba(0,0,0,0.18] hover:bg-[#111] transition-colors" target="_blank" rel="noopener noreferrer">
-                {project.cta}
+              <Link href={project.ctaHref} className="inline-flex w-fit items-center justify-center px-4 sm:px-5 py-2.5 sm:py-3 bg-black text-white text-sm sm:text-base font-semibold rounded-md shadow-[0_8px_18px_rgba(0,0,0,0.18] hover:bg-[#111] transition-colors">
+                {project.ctaLabel}
               </Link>
             </div>
 
